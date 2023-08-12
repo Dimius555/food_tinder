@@ -1,0 +1,253 @@
+[
+    {
+      "name": "Яблоко",
+      "imageLink": "https://example.com/apple.jpg",
+      "description": "Сладкое и хрустящее"
+    },
+    {
+      "name": "Банан",
+      "imageLink": "https://example.com/banana.jpg",
+      "description": "Желтый и питательный"
+    },
+    {
+      "name": "Апельсин",
+      "imageLink": "https://example.com/orange.jpg",
+      "description": "Цитрусовое наслаждение"
+    },
+    {
+      "name": "Морковь",
+      "imageLink": "https://example.com/carrot.jpg",
+      "description": "Яркая и хрустящая"
+    },
+    {
+      "name": "Брокколи",
+      "imageLink": "https://example.com/broccoli.jpg",
+      "description": "Зеленое и питательное"
+    },
+    {
+      "name": "Клубника",
+      "imageLink": "https://example.com/strawberry.jpg",
+      "description": "Сладкая и сочная"
+    },
+    {
+      "name": "Помидор",
+      "imageLink": "https://example.com/tomato.jpg",
+      "description": "Красное и универсальное"
+    },
+    {
+      "name": "Виноград",
+      "imageLink": "https://example.com/grapes.jpg",
+      "description": "Маленький и ароматный"
+    },
+    {
+      "name": "Салат",
+      "imageLink": "https://example.com/lettuce.jpg",
+      "description": "Свежий и хрустящий"
+    },
+    {
+      "name": "Ананас",
+      "imageLink": "https://example.com/pineapple.jpg",
+      "description": "Тропическое удовольствие"
+    },
+    {
+      "name": "Арбуз",
+      "imageLink": "https://example.com/watermelon.jpg",
+      "description": "Сочный и освежающий"
+    },
+    {
+      "name": "Голубика",
+      "imageLink": "https://example.com/blueberry.jpg",
+      "description": "Мелкая и богатая антиоксидантами"
+    },
+    {
+      "name": "Картофель",
+      "imageLink": "https://example.com/potato.jpg",
+      "description": "Крахмалистый и универсальный"
+    },
+    {
+      "name": "Огурец",
+      "imageLink": "https://example.com/cucumber.jpg",
+      "description": "Свежий и увлажняющий"
+    },
+    {
+      "name": "Манго",
+      "imageLink": "https://example.com/mango.jpg",
+      "description": "Экзотический и сладкий"
+    },
+    {
+      "name": "Шпинат",
+      "imageLink": "https://example.com/spinach.jpg",
+      "description": "Зеленый и питательный"
+    },
+    {
+      "name": "Вишня",
+      "imageLink": "https://example.com/cherry.jpg",
+      "description": "Кислая и красочная"
+    },
+    {
+      "name": "Перец",
+      "imageLink": "https://example.com/pepper.jpg",
+      "description": "Цветной и острый"
+    },
+    {
+      "name": "Груша",
+      "imageLink": "https://example.com/pear.jpg",
+      "description": "Сладкая и грушевидная"
+    },
+    {
+      "name": "Цуккини",
+      "imageLink": "https://example.com/zucchini.jpg",
+      "description": "Мягкий и универсальный"
+    },
+    {
+      "name": "Авокадо",
+      "imageLink": "https://example.com/avocado.jpg",
+      "description": "Кремовый и питательный"
+    },
+    {
+      "name": "Киви",
+      "imageLink": "https://example.com/kiwi.jpg",
+      "description": "Кислый и зеленый"
+    },
+    {
+      "name": "Баклажан",
+      "imageLink": "https://example.com/eggplant.jpg",
+      "description": "Фиолетовый и насыщенный"
+    },
+    {
+      "name": "Малина",
+      "imageLink": "https://example.com/raspberry.jpg",
+      "description": "Сладкая и кислая"
+    },
+    {
+      "name": "Персик",
+      "imageLink": "https://example.com/peach.jpg",
+      "description": "Сочный и пушистый"
+    },
+    {
+      "name": "Капуста",
+      "imageLink": "https://example.com/cabbage.jpg",
+      "description": "Хрустящая и зеленая"
+    },
+    {
+      "name": "Ежевика",
+      "imageLink": "https://example.com/blackberry.jpg",
+      "description": "Темная и вкусная"
+    },
+    {
+      "name": "Редис",
+      "imageLink": "https://example.com/radish.jpg",
+      "description": "Острый и красный"
+    },
+    {
+      "name": "Манго",
+      "imageLink": "https://example.com/mango.jpg",
+      "description": "Экзотический и сладкий"
+    },
+    {
+      "name": "Папайя",
+      "imageLink": "https://example.com/papaya.jpg",
+      "description": "Тропическая и яркая"
+    },
+    {
+      "name": "Цветная капуста",
+      "imageLink": "https://example.com/cauliflower.jpg",
+      "description": "Белая и универсальная"
+    },
+    {
+      "name": "Абрикос",
+      "imageLink": "https://example.com/apricot.jpg",
+      "description": "Маленький и ароматный"
+    },
+    {
+      "name": "Сладкий картофель",
+      "imageLink": "https://example.com/sweet-potato.jpg",
+      "description": "Ореховый и сладкий"
+    },
+    {
+      "name": "Груша",
+      "imageLink": "https://example.com/pear.jpg",
+      "description": "Сладкая и грушевидная"
+    },
+    {
+      "name": "Спаржа",
+      "imageLink": "https://example.com/asparagus.jpg",
+      "description": "Нежная и зеленая"
+    },
+    {
+      "name": "Инжир",
+      "imageLink": "https://example.com/fig.jpg",
+      "description": "Уникальный и сладкий"
+    },
+    {
+      "name": "Сельдерей",
+      "imageLink": "https://example.com/celery.jpg",
+      "description": "Хрустящий и низкокалорийный"
+    },
+    {
+      "name": "Слива",
+      "imageLink": "https://example.com/plum.jpg",
+      "description": "Сочная и фиолетовая"
+    },
+    {
+      "name": "Лук",
+      "imageLink": "https://example.com/onion.jpg",
+      "description": "Ароматный и универсальный"
+    },
+    {
+      "name": "Дыня",
+      "imageLink": "https://example.com/cantaloupe.jpg",
+      "description": "Сладкая и освежающая"
+    },
+    {
+      "name": "Свекла",
+      "imageLink": "https://example.com/beet.jpg",
+      "description": "Земляничная и разноцветная"
+    },
+    {
+      "name": "Грейпфрут",
+      "imageLink": "https://example.com/grapefruit.jpg",
+      "description": "Кислый и цитрусовый"
+    },
+    {
+      "name": "Огурец",
+      "imageLink": "https://example.com/cucumber.jpg",
+      "description": "Свежий и увлажняющий"
+    },
+    {
+      "name": "Лимон",
+      "imageLink": "https://example.com/lemon.jpg",
+      "description": "Острый и кислый"
+    },
+    {
+      "name": "Артишок",
+      "imageLink": "https://example.com/artichoke.jpg",
+      "description": "Нежный и уникальный"
+    },
+    {
+      "name": "Вишня",
+      "imageLink": "https://example.com/cherry.jpg",
+      "description": "Кислая и красочная"
+    },
+    {
+      "name": "Гранат",
+      "imageLink": "https://example.com/pomegranate.jpg",
+      "description": "Семенной и сладкий"
+    },
+    {
+      "name": "Груша",
+      "imageLink": "https://example.com/pear.jpg",
+      "description": "Сладкая и грушевидная"
+    },
+    {
+      "name": "Редис",
+      "imageLink": "https://example.com/radish.jpg",
+      "description": "Острый и красный"
+    },
+    {
+      "name": "Ананас",
+      "imageLink": "https://example.com/pineapple.jpg",
+      "description": "Тропическое удовольствие"
+    }
+  ]
+  
