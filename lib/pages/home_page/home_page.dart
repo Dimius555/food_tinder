@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:food_tinder/config/ui_theme.dart';
 import 'package:food_tinder/cubits/home_cubit/home_cubit.dart';
@@ -29,17 +32,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final theme = UIThemes.of(context);
     return Scaffold(
+      appBar: Platform.isAndroid || Platform.isIOS
+          ? AppBar(
+              title: Text(
+                'Любимые фруткы и овощи',
+                style: theme.appBarTextStyle.copyWith(color: theme.whiteColor),
+              ),
+            )
+          : null,
       body: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {
           if (state.status is HomeSuccessfulStatus) {
-            _counter = state.dishes.length >= 3 ? 3 : 0;
+            _counter = 0;
           }
         },
         builder: (context, state) {
           return Stack(
             alignment: Alignment.center,
             children: [
-              if (state.dishes.isEmpty)
+              if (state.dishes.isEmpty && state.status is! HomeIsLoading)
                 Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -62,7 +73,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               if (state.dishes.isNotEmpty)
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SwipeableCardsSection(
                       cardController: _cardController,
@@ -70,21 +81,24 @@ class _HomePageState extends State<HomePage> {
                       items: _createFirstThreeCards(state),
                       onCardSwiped: (dir, index, widget) {
                         // Добавляем новую карточку
-                        if (state.dishes.length >= 3 && _counter <= state.dishes.length) {
+                        if (state.dishes.length >= 3 && _counter < state.dishes.length) {
                           _cardController.addItem(SwipeCardWidget(
                             description: state.dishes[_counter].descriptions,
                             title: state.dishes[_counter].name,
                           ));
                         }
 
-                        if (state.dishes.length < 3 && _counter == state.dishes.length - 1) {
+                        if (_counter == state.dishes.length) {
                           HomeCubit.read(context).reachedLastElement();
                         }
-
+                        log(_counter.toString());
                         _counter++;
                       },
                       enableSwipeUp: false,
                       enableSwipeDown: false,
+                    ),
+                    const SizedBox(
+                      height: 64,
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 40.0),
@@ -120,7 +134,7 @@ class _HomePageState extends State<HomePage> {
     int c = 0;
     List<Widget> result = [];
     if (state.dishes.length > 3) {
-      while (c < _counter) {
+      while (c < 3) {
         result.add(
           SwipeCardWidget(
             description: state.dishes[c].descriptions,

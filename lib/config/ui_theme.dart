@@ -17,7 +17,7 @@ class UIThemes {
           systemOverlayStyle:
               SystemUiOverlayStyle(statusBarColor: Colors.transparent, statusBarIconBrightness: Brightness.light, statusBarBrightness: Brightness.dark),
           centerTitle: true,
-          backgroundColor: LightModeColors.backgroundSecondary,
+          backgroundColor: LightModeColors.accentApp,
           elevation: 0,
           shadowColor: Color.fromRGBO(0, 0, 0, 0.1),
         ),

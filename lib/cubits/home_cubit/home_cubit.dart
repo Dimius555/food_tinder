@@ -34,8 +34,10 @@ class HomeCubit extends Cubit<HomeState> {
       // Блок finally используем для того, чтоб если произошла ошибка,
       // то после 5 секунд можно было бы вернуть состояние, которое было до загрузки
       // при этом параметр dishes остантся таким, какой и был
-      await Future.delayed(const Duration(seconds: 5));
-      emit(state.copyWith(status: HomeSuccessfulStatus()));
+      if (state.status is HomeErrorAppeared) {
+        await Future.delayed(const Duration(seconds: 5));
+        emit(state.copyWith(status: HomeSuccessfulStatus()));
+      }
     }
   }
 
