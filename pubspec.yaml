@@ -15,5 +15,19 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 
+  # Data packages
+  shared_preferences: ^2.1.1
+
+  # DI
+  get_it: ^7.6.0
+
+  # State managment
+  flutter_bloc: ^8.1.2
+  provider: ^6.0.5
+
+  # UI packages
+  shimmer: ^2.0.0
+  swipeable_card_stack: ^0.0.5
+
 flutter:
   uses-material-design: true
