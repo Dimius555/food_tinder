@@ -4,6 +4,7 @@ class LightModeColors {
   static const Color shadow = Color(0x44849DB7);
 
   //Accent colors
+  static const Color accentApp = Color.fromARGB(255, 93, 41, 177);
   static const Color accentPositive = Color(0xFF5EB129);
   static const Color accentNegative = Color(0xFFFF6209);
   static const Color accentNegativeAlternative = Color(0xFFFF0909);
@@ -31,6 +32,7 @@ class LightModeColors {
 class DarkModeColors {
   static const Color shadow = Color(0x44000000);
   //Accent colors
+  static const Color accentApp = Color.fromARGB(255, 125, 55, 238);
   static const Color accentPositive = Color(0xFF5ED076);
   static const Color accentNegative = Color(0xFFFF9572);
   static const Color accentNegativeAlternative = Color(0xFFFF7272);

@@ -22,7 +22,7 @@ class UIThemes {
           shadowColor: Color.fromRGBO(0, 0, 0, 0.1),
         ),
         colorScheme: const ColorScheme.light(
-          primary: LightModeColors.backgroundSecondary,
+          primary: LightModeColors.accentApp,
           onSecondary: Colors.white,
         ),
         textTheme: const TextTheme(),
@@ -204,6 +204,7 @@ class UIThemes {
   Color get accentNegativeColor => isDarkTheme ? DarkModeColors.accentNegative : LightModeColors.accentNegative;
   Color get accentNegativeAlternativeColor => isDarkTheme ? DarkModeColors.accentNegativeAlternative : LightModeColors.accentNegativeAlternative;
   Color get accentWarningColor => isDarkTheme ? DarkModeColors.accentWarning : LightModeColors.accentWarning;
+  Color get accentApp => isDarkTheme ? DarkModeColors.accentApp : LightModeColors.accentApp;
 
   Color get backgroundPrimaryColor => isDarkTheme ? DarkModeColors.backgroundPrimary : LightModeColors.backgroundPrimary;
   Color get backgroundSecondaryColor => isDarkTheme ? DarkModeColors.backgroundSecondary : LightModeColors.backgroundSecondary;
