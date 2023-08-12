@@ -11,7 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key, required this.title}) : super(key: key);
+  const HomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -21,6 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late int _counter;
   late SwipeableCardSectionController _cardController;
+  bool _isInteractionEnabled = true;
 
   @override
   void initState() {
@@ -81,18 +82,20 @@ class _HomePageState extends State<HomePage> {
                       items: _createFirstThreeCards(state),
                       onCardSwiped: (dir, index, widget) {
                         // Добавляем новую карточку
-                        if (state.dishes.length >= 3 && _counter < state.dishes.length) {
+                        if (state.dishes.length >= 3 && _counter < state.dishes.length - 2) {
                           _cardController.addItem(SwipeCardWidget(
                             description: state.dishes[_counter].descriptions,
                             title: state.dishes[_counter].name,
                           ));
                         }
-
+                        log(_counter.toString());
                         if (_counter == state.dishes.length) {
                           HomeCubit.read(context).reachedLastElement();
                         }
-                        log(_counter.toString());
+
                         _counter++;
+                        // Ставим задержку на взаимодействие с кнопками, так как анимация в карточке занимает время в 700 милисекунд
+                        Future.delayed(const Duration(milliseconds: 700)).then((value) => _isInteractionEnabled = true);
                       },
                       enableSwipeUp: false,
                       enableSwipeDown: false,
@@ -108,13 +111,19 @@ class _HomePageState extends State<HomePage> {
                           FloatingActionButton(
                             child: const Icon(Icons.chevron_left),
                             onPressed: () {
-                              _cardController.triggerSwipeLeft();
+                              if (_isInteractionEnabled) {
+                                _isInteractionEnabled = false;
+                                _cardController.triggerSwipeLeft();
+                              }
                             },
                           ),
                           FloatingActionButton(
                             child: const Icon(Icons.chevron_right),
                             onPressed: () {
-                              _cardController.triggerSwipeRight();
+                              if (_isInteractionEnabled) {
+                                _isInteractionEnabled = false;
+                                _cardController.triggerSwipeRight();
+                              }
                             },
                           ),
                         ],

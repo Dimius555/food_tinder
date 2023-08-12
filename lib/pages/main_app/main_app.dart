@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
         final isSystemMode = context.watch<ThemeNotifier>().isSystemMode;
         return MaterialApp(
           title: 'Flutter Demo',
-          home: HomePage(title: 'Flutter Demo Home Page'),
+          home: const HomePage(title: 'Flutter Demo Home Page'),
           theme: UIThemes.lightTheme(),
           darkTheme: UIThemes.darkTheme(),
           themeMode: isSystemMode
