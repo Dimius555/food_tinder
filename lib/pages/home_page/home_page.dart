@@ -1,7 +1,6 @@
 import 'dart:developer';
-import 'dart:io';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
-import 'package:flutter/cupertino.dart';
 import 'package:food_tinder/config/ui_theme.dart';
 import 'package:food_tinder/cubits/home_cubit/home_cubit.dart';
 import 'package:food_tinder/widgets/app_loading_widget.dart';
@@ -11,8 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -32,15 +30,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final theme = UIThemes.of(context);
+    final state = HomeCubit.watchState(context);
+
+    if (state.status is HomeSuccessfulStatus) {
+      _counter = 0;
+    }
+
     return Scaffold(
-      appBar: Platform.isAndroid || Platform.isIOS
-          ? AppBar(
+      appBar: kIsWeb
+          ? null
+          : AppBar(
               title: Text(
                 'Любимые фруткы и овощи',
                 style: theme.appBarTextStyle.copyWith(color: theme.whiteColor),
               ),
-            )
-          : null,
+            ),
       body: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {
           if (state.status is HomeSuccessfulStatus) {
